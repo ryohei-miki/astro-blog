@@ -10,8 +10,13 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/react": "^2.0.2",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
     "astro": "^2.0.17",
-    "microcms-js-sdk": "^2.3.2"
+    "microcms-js-sdk": "^2.3.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "prettier": "^2.8.4",
