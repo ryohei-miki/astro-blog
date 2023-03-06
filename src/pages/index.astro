@@ -8,23 +8,13 @@ const response = await getBlogs({ fields: ["id", "title"] });
 ---
 
 <Layout title="My first blog with Astro">
-  <main>
-    <ul class="flex space-x-4">
+  <main class="px-6">
+    <div class="flex justify-center space-x-4">
       {
         response.contents.map((content: Blog) => (
-          <>
-            <Entry title={content.title} href={content.id} image={""} />
-          </>
+          <Entry title={content.title} href={content.id} image={""} />
         ))
       }
-    </ul>
+    </div>
   </main>
 </Layout>
-
-<style>
-  main {
-    margin: auto;
-    padding: 1em;
-    max-width: 60ch;
-  }
-</style>

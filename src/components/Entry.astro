@@ -1,0 +1,21 @@
+---
+export interface Props {
+  title: string;
+  href: string;
+  image: string;
+}
+
+const { href, title, body } = Astro.props;
+---
+
+<article class="w-full rounded bg-neutral-700 shadow-lg">
+  <div class="flex flex-col justify-between h-full px-6 py-4 max-h-96">
+    <a href={href} class="line-clamp-2 flex-1 font-bold text-xl mb-2">{title}</a>
+    <ul class="flex space-x-3">
+      <li class="text-xs bg-indigo-500 p-1 rounded">Next.js</li>
+      <li class="text-xs bg-indigo-500 p-1 rounded">React</li>
+      <li class="text-xs bg-indigo-500 p-1 rounded">CSS</li>
+    </ul>
+    <div class="pt-4">2023/03/07 22:55</div>
+  </div>
+</article>
