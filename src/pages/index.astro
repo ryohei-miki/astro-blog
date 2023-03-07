@@ -1,14 +1,16 @@
 ---
 import Entry from "@components/Entry.astro";
 import Layout from "@layouts/Layout.astro";
+import { Header } from "@components/Header";
 
 //microCMS呼び出し
 import { Blog, getBlogs } from "@libs/microcms";
 const response = await getBlogs({ fields: ["id", "title"] });
 ---
 
-<Layout title="My first blog with Astro">
-  <main class="px-6">
+<Layout title="RM Blog">
+  <Header />
+  <main class="px-6 my-4">
     <div class="flex justify-center space-x-4">
       {
         response.contents.map((content: Blog) => (
@@ -17,4 +19,5 @@ const response = await getBlogs({ fields: ["id", "title"] });
       }
     </div>
   </main>
+  <footer class="absolute bottom-0 left-2/4 pb-3 text-sm">&copy;2023 Ryohei Miki</footer>
 </Layout>
