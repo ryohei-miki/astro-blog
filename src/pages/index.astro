@@ -1,7 +1,6 @@
 ---
 import Entry from "@components/Entry.astro";
 import Layout from "@layouts/Layout.astro";
-import { Header } from "@components/Header";
 
 //microCMS呼び出し
 import { Blog, getBlogs } from "@libs/microcms";
@@ -9,7 +8,6 @@ const response = await getBlogs({ fields: ["id", "title"] });
 ---
 
 <Layout title="RM Blog">
-  <Header />
   <main class="px-6 my-4">
     <div class="flex justify-center space-x-4">
       {
