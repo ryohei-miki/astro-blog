@@ -9,10 +9,12 @@ module.exports = {
         red: "#E43777",
         navy: "#574EC1",
         grey: "#CECECE",
+        blue: "#38bdf9",
       }
     }
   },
 	plugins: [
 		require('@tailwindcss/line-clamp'),
+    require('@tailwindcss/typography'),
 	],
 }
