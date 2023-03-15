@@ -1,6 +1,6 @@
 export const Header: React.FC = () => {
   return (
-    <header className="flex items-center p-6">
+    <header className="flex items-center py-6">
       <a href='/' className="flex-1 text-4xl font-bold">RM Blog</a>
       <ul className="flex space-x-4 font-semibold">
         <li>

@@ -8,8 +8,8 @@ const response = await getBlogs({ fields: ["id", "title"] });
 ---
 
 <Layout title="RM Blog">
-  <main class="px-6 my-4">
-    <div class="flex justify-center space-x-4">
+  <main class="my-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       {
         response.contents.map((content: Blog) => (
           <Entry title={content.title} href={content.id} image={""} />
